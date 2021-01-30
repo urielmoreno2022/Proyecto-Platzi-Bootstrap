@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="index.css">
+    <title>PlatziConf Hawaii</title>
+  </head>
+  <body data-bs-spy="scroll" data-bs-target="#navbarSupportedContent" data-bs-offset="0">
+   <!-- para el Scrollspy se agrega al body data-bs-spy="scroll" data-bs-target="#navbarSupportedContent" data-bs-offset="0"-->
+   <!--Header-->
+   <header>
+    <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <!--Se le crea un id=header para los estilos-->
+            <!--cabiamos en la class el light por dark-->
+            <!-- para el Scrollspy se agrega la clase fixed-top-->
+         <div class="container">
+             <!--camiamos container-fluid por solamente container-->
+            <a class="navbar-brand" href="#">
+                <img src="img/platzi-logo.png" alt="Paltzi logo">
+                Conf Hawaii
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <!-- cambiamos me-auto por ms-auto-->
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#main">La Conferencia</a>
+                    <!--para el Scrollspy se agrega en href="#main"-->
+                    <!--Cambiamos Home por La conferencia-->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#speakers">Los Oradores</a>
+                    <!--para el Scrollspy se agrega en href="#speakers"-->
+                </li>
+                <!--No vamos a tener dropdown lo quitamos 
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                -->
+
+                <!--No vamos a tener ningún elemento deshabilitado
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+                -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#place-time">El Lugar y la Fecha</a>
+                    <!--para el Scrollspy se agrega en href="#place-time"-->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#convierte-orador">Conviertete en Orador</a>
+                    <!--para el Scrollspy se agrega en href="#convierte-orador"-->
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-platzi" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Comprar Tickets</a>
+                    <!--Se crea la clase "text-platzi" -->
+                    <!--se copia para el modal: data-bs-toggle="modal" data-bs-target="#staticBackdrop" -->
+                </li>
+                </ul>
+                <!-- Se elimina el formulario de busqueda
+                    <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>  
+                -->
+            </div>
+          </div>
+    </nav>
+   </header>
+
+   <!--Main-->
+   <main id="main">
+       <!--para agregar un overlay cambiamos el id="carouselExampleFade"
+        por id="carousel"-->
+    <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false">
+        <!--vamos agregar data-bs-pause="false", sirve para que no se realice una pausa
+        en las imagenes en el momento de tener el mouse sobre ellas-->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <!--Colocamos la dirección correspondientes de las imagenes con su nombre-->
+            <img src="img/hawaii.jpg" class="d-block w-100" alt="Hawaii">
+          </div>
+          <div class="carousel-item">
+            <img src="img/hawaii2.jpg" class="d-block w-100" alt="hawaii2">
+          </div>
+          <div class="carousel-item">
+            <img src="img/hawaii3.jpg" class="d-block w-100" alt="hawaii3">
+          </div>
+          <div class="overlay">
+              <div class="container">
+                  <div class="row align-items-center"><!--El texto quede centrado verticalmente-->
+                      <div class="col md-6 offset-md-6 text-center text-md-end">
+                        <!--text-center: texto centrado para dispositivos pequeños
+                        text-md-end: texto a la derecha para dispositivos grandes-->
+                        <h1>Patzi Conf Hawaii</h1>
+                        <p class="d-none d-md-block">
+                        <!--d-none: el texto desaparce para dispositivos pequeños
+                        d-md-block: el texto aparece para dispositivos grandes-->
+                        PlatziConf, llega por primera vez a Hawaii, un evento para compartir con nuestra comunidad, el conocimiento y experiencia, de los expertos que estan creando el futuro de Internet.
+                        Ven a conocer a miembros del Team Platzi, a otros estudiantes de Platzi y a los oradores de primer nivel que tenemos para ti. Te esperamos.
+                        </p>
+                        <a href="#" class="btn btn-outline-light">Quiero ser un Orador</a>
+                        <!--agregamos estilos al botón, no necesariamente debe ser un button. tambien puede ser aplicado a los link-->
+                        <button type="button" class="btn btn-platzi" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Comprar Tickets</button>
+                        <!--para que combine el color con el de platzi, cambiamos success por platzi y creamos un estilo en index.css-->
+                        <!--se copia para el modal: data-bs-toggle="modal" data-bs-target="#staticBackdrop" -->
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <!-- quitamos los dos controles.
+        <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </a>
+        -->
+      </div>
+   </main>
+   <!--speaker-->
+   <speakers>
+     <section id="speakers" class="mt-4" >
+       <!--class="mt-4" para separar la sección de la anterior en este caso la de main.
+                 "mb-4" para separar la sección despues en este caso la de footer  -->
+       <div class="container">
+         <div class="row">
+           <div class="col text-center text-uppercase">
+             <!--text-uppercase: texto en mayuscula-->
+             <small>Conoce a los</small>
+             <h2>Oradores</h2>
+           </div>
+         </div>
+         <div class="row">
+           <div class="col-12 col-md-6 col-lg-4 mb-4"> <!--md-4: ocupa 4 de las 12 columnas
+             se cambia por col-12 col-md-6 col-lg-4-->
+             <!--Aquí se pega todo el contenido de cards de bootstrap-->
+             <div class="card border-0">
+              <!--Le quitamos el style al cards-->
+              <img src="img/Speakers/sacha.jpg" class="card-img-top rounded-circle " alt="Foto de Sacha">
+              <div class="card-body">
+                <div class="badges">
+                  <span class="badge bg-warning text-dark">JavaScritpt</span>
+                  <span class="badge bg-info text-dark">React</span>
+                </div>
+                <h5 class="card-title">Sacha Lifszyc</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum assumenda necessitatibus beatae tenetur qui dolores, ipsa molestias possimus et voluptates perspiciatis sint ullam unde non tempora ipsam quia illum ex.</p>
+                <!--Quitamos  el botón
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                -->
+              </div>
+            </div>
+           </div>
+           <div class="col-12 col-md-6 col-lg-4 mb-4"> <!--md-4: ocupa 4 de las 12 columnas
+            se cambia por col-12 col-md-6 col-lg-4-->
+            <!--Aquí se pega todo el contenido de cards de bootstrap-->
+            <div class="card border-0">
+             <!--Le quitamos el style al cards-->
+             <img src="img/Speakers/leonidas2.jpg" class="card-img-top rounded-circle " alt="Foto de Leonidas">
+             <div class="card-body">
+              <div class="badges">
+                <span class="badge bg-danger">Frontend</span>
+                <span class="badge bg-info text-dark">React</span>
+              </div>
+               <h5 class="card-title">Leonidas Esteban</h5>
+               <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum assumenda necessitatibus beatae tenetur qui dolores, ipsa molestias possimus et voluptates perspiciatis sint ullam unde non tempora ipsam quia illum ex.</p>
+               <!--Quitamos  el botón
+               <a href="#" class="btn btn-primary">Go somewhere</a>
+               -->
+             </div>
+           </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 mb-4"> <!--md-4: ocupa 4 de las 12 columnas
+            se cambia por col-12 col-md-6 col-lg-4-->
+            <!--Aquí se pega todo el contenido de cards de bootstrap-->
+            <div class="card border-0">
+             <!--Le quitamos el style al cards-->
+             <img src="img/Speakers/freddy.jpg" class="card-img-top rounded-circle " alt="Foto de Freddy">
+             <div class="card-body">
+              <div class="badges">
+                <span class="badge bg-danger">Frontend</span>
+              </div>
+               <h5 class="card-title">Freddy Vega</h5>
+               <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum assumenda necessitatibus beatae tenetur qui dolores, ipsa molestias possimus et voluptates perspiciatis sint ullam unde non tempora ipsam quia illum ex.</p>
+               <!--Quitamos  el botón
+               <a href="#" class="btn btn-primary">Go somewhere</a>
+               -->
+             </div>
+           </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 mb-4"> <!--md-4: ocupa 4 de las 12 columnas
+            se cambia por col-12 col-md-6 col-lg-4-->
+            <!--Aquí se pega todo el contenido de cards de bootstrap-->
+            <div class="card border-0">
+             <!--Le quitamos el style al cards-->
+             <img src="img/Speakers/cvander.jpg" class="card-img-top rounded-circle " alt="Foto de Christian">
+             <div class="card-body">
+              <div class="badges">
+                <span class="badge bg-info text-dark">React</span>
+              </div>
+               <h5 class="card-title">Christian Van Der</h5>
+               <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum assumenda necessitatibus beatae tenetur qui dolores, ipsa molestias possimus et voluptates perspiciatis sint ullam unde non tempora ipsam quia illum ex.</p>
+               <!--Quitamos  el botón
+               <a href="#" class="btn btn-primary">Go somewhere</a>
+               -->
+             </div>
+           </div>
+          </div>
+         </div>
+       </div>
+     </section>
+   </speakers>
+
+   <!--Lugar y fecha del evento-->
+   <section id="place-time">
+     <div class="container-fluid">
+       <div class="row">
+         <div class="col-12 col-lg-6 px-0">
+           <!--para quitar espacio de padding px-0 o tambien ps-0 pe-0-->
+           <img src="img/honolulu.jpg"  alt="Honolulu">
+         </div>
+         <div class="col-12 col-lg-6 pt-4 pb-4"><!--El contenido empiece un poco más abajo-->
+           <h2>Honolulu - Octubre 2021</h2>
+           <p>Honolulu o Honolulú es la capital y localidad más grande del estado de Hawái, en los Estados Unidos.Honolulu es la más sureña de entre las principales ciudades estadounidenses. Aunque el nombre de Honolulu se refiere al área urbana en la costa sureste de la isla de Oahu, la ciudad y el condado de Honolulu han formado una ciudad-condado consolidada que cubre toda la isla (aproximadamente 600 km² de superficie).</p>
+           <!--Agregamos un botón-->
+           <a class="btn btn-outline-light" href="https://es.wikipedia.org/wiki/Honolulu">Conoce más</a>
+         </div>
+       </div>
+     </div>
+   </section>
+
+   <!--conviertete en un orador-->
+   <section id="convierte-orador" class="pt-3 pb-3">
+     <div class="container">
+       <div class="row">
+         <div class="col text-uppercase text-center">
+           <small>Conviértete en</small>
+           <h2>Orador</h2>
+         </div>
+       </div>
+       <div class="row">
+         <div class="col text-center">
+          Anótate como orador para darnos una 
+          <span data-bs-toggle="tooltip" data-bs-placement="top" title="Charlas de 5 minutos">
+            charla ignite.
+           </span>
+          Cuéntanos de qué quieres hablar!
+         </div>
+       </div>
+       <div class="row">
+        <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2 pt-2">
+           <!--Pegamos el código del formulario-->
+         <form> <!--agregamos el formulario-->
+           <div class="row">
+            <div class="mb-3 col-12 col-md-6">
+              <input type="text" class="form-control" placeholder="Nombre" aria-label="First name">
+            </div>
+            <div class="mb-3 col-12 col-md-6">
+              <!--mb-3 para separar los controles en dispositivos pequeños-->
+              <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <!--form-control-lg: para que sea un input grande-->
+              <textarea name="text" class="form-control form-control-lg" placeholder="Sobre que quieres hablar?"></textarea>
+              <small class="form-text text-muted">
+              <!--text-muted: para que aparezca un poco más gris.-->
+              Recuerda incluir un título a tu charla.
+              </small>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <button type="button" class="btn btn-platzi w-100">Enviar</button>
+              <!-- w-100 el botón ocupe más espacio-->
+            </div>
+          </div>
+         </form>
+         </div>
+       </div>
+     </div>
+   </section>
+   
+   <!--Footer-->
+   <footer id="footer" class="pb-4 pt-4"><!--agregar padding al footer-->
+    <div class="container" >
+      <div class="row text-center">
+        <div class="col-12 col-lg">
+         <a href="#">Preguntas Frecuentes</a>
+        </div>
+        <div class="col-12 col-lg">
+            <a href="#">Contáctanos</a>
+        </div>
+        <div class="col-12 col-lg">
+            <a href="#">Prensa</a>
+        </div>
+        <div class="col-12 col-lg">
+            <a href="#">Términos y condiciones</a>
+        </div>
+        <div class="col-12 col-lg">
+            <a href="#">Privacidad</a>
+        </div>
+        <div class="col-12 col-lg">
+            <a href="#">Estudiantes</a>
+        </div>
+      </div>
+    </div>
+   </footer>
+
+   <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <!--adicional se agrega modal-dialog-centered para que quede centrado-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Comprar Tickets</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- cambiar los ... tres puntos por un formulario-->
+            <form>
+              <div class="form-row">
+                <div class="form-group col">
+                  <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                  </div>
+                </div>
+              </div>
+            </form>
+            <!-- agregar un mensaje de alerta-->
+            <div class="alert alert-warning" role="alert">
+              Recirbiras un correo de confirmación sí sales sorteado.
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-platzi">Comprar</button>
+            <!--cambiamos btn-primary por btn-platzi-->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+    <script src="index.js"></script> <!--Se incluey el script dejs para que funcione el tooltip-->
+  </body>
+</html>
